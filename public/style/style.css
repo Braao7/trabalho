@@ -25,11 +25,21 @@ button {
 #principal {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
+    padding: 20px;
 }
 
 /* Perfil/Orderna */
+
+#perfil{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
 
 .personal-image {
     text-align: center;
@@ -43,6 +53,8 @@ button {
     position: relative;
     width: 120px;
     height: 120px;
+    border-radius: 100%;
+    background-color: #D9D9D9;
 }
 
 .personal-avatar {
@@ -52,7 +64,6 @@ button {
     box-sizing: border-box;
     border-radius: 100%;
     border: 2px solid transparent;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
     transition: all ease-in-out .3s;
 }
 
@@ -83,8 +94,50 @@ button {
     height: 50px;
 }
 
+#botao-ordena {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 3%;
+    background-color: #D9D9D9;
+}
+
+#botao-ordena p{
+    font-size: 20px;
+}
+
+#botao-ordena i{
+    font-size: 20px;
+}
+
 /* Prontuarios */
-#prontuarios {}
+#prontuario-main{
+    display: block;
+    width: 100%;
+}
+
+#lista-prontuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    list-style: none;
+}
+
+.prontuario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    overflow: hidden;
+    background-color: #D9D9D9;
+    cursor: pointer;
+}
 
 /* Rodape */
 

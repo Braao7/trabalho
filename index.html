@@ -16,33 +16,41 @@
         </button>
 
         <button>
-            <i class="fa fa-moon" style="display: block; font-size: 2em;"></i>
-            <i class="fa fa-sun" style="display: none; font-size: 2em;"></i>
+            <i class="fa fa-moon" style="display: none; font-size: 2em;"></i>
+            <i class="fa fa-sun" style="display: block; font-size: 2em;"></i>
         </button>
-
     </header>
 
     <main id="principal">
         <section id="perfil">
             <div class="personal-image">
                 <label class="label">
-                    <input type="file" />
+                    <input id ="imagem" type="file" onchange="trocarFoto()"/>
                     <figure class="personal-figure">
-                        <img src="" class="personal-avatar"
-                            alt="avatar">
+                        <img src="public/assets/user-icon.png" class="personal-avatar" alt="avatar">
                         <figcaption class="personal-figcaption">
-                            <img
-                                src="https://raw.githubusercontent.com/ThiagoLuizNunes/angular-boilerplate/master/src/assets/imgs/camera-white.png">
+                            <img src="public/assets/camera-white.png">
                         </figcaption>
                     </figure>
                 </label>
+                <h3>Nome</h3>
             </div>
+
+            <button id="botao-ordena">
+                <i class="fa-solid fa-arrow-down"></i>
+                <p>Ordenar</p>
+            </button>
         </section>
 
-        <section id="prontuarios">
-            <h1>ola</h1>
-            <h1>ola</h1>
-            <h1>ola</h1>
+        <section id="prontuario-main">
+            <ul id="lista-prontuario">
+                <li class="prontuario"></li>
+                <li class="prontuario"></li>
+                <li class="prontuario"></li>
+                <li class="prontuario"></li>
+                <li class="prontuario"></li>
+                <li class="prontuario"></li>
+            </ul>
         </section>
 
     </main>
@@ -51,5 +59,5 @@
 
     </footer>
 </body>
-
+<script src="public/js/script.js"></script>
 </html>
