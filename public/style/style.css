@@ -129,9 +129,10 @@ button {
     height: 50px;
 }
 
-#botoes{
+#botoes {
     display: flex;
     gap: 5px;
+    height: 43px;
 }
 
 .botao-tutorial{
@@ -139,7 +140,6 @@ button {
     justify-content: space-between;
     align-items: center;
     flex-basis: 50%;
-    height: 43px;
     gap: 20px;
     padding: 10px;
     border-radius: 3%;
@@ -152,14 +152,12 @@ button {
     justify-content: space-between;
     align-items: center;
     flex-basis: 50%;
-    height: 43px;
     gap: 20px;
     padding: 10px;
     border-radius: 3%;
     font-size: 20px;
     background-color: #D9D9D9;
 }
-
 
 /* Prontuarios */
 #prontuario-main{
