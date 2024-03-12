@@ -16,10 +16,26 @@
         </button>
 
         <button>
+            
             <i class="fa fa-moon" style="display: none; font-size: 2em;"></i>
             <i class="fa fa-sun" style="display: block; font-size: 2em;"></i>
         </button>
     </header>
+   
+    <button onclick="iniciarTutorial('')" class="botao-tutorial">Tutorial de uso</button>
+
+
+    <div id="modal" class="modal">
+        <span class="modal-close" onclick="fecharModal()">&times;</span>
+        <div id="modal-content" class="modal-content">
+            <!-- Conteúdo do tutorial -->
+        </div>
+
+        <button id="modal-button" class="modal-button" onclick="proximoPasso()">Próximo</button>
+        <button id="modal-back-button" class="modal-button" onclick="passoAnterior()">Voltar</button>
+
+    </div>
+
 
     <main id="principal">
         <section id="perfil">
@@ -59,5 +75,6 @@
 
     </footer>
 </body>
+
 <script src="public/js/script.js"></script>
 </html>
