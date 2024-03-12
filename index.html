@@ -16,24 +16,23 @@
         </button>
 
         <button>
-            
+
             <i class="fa fa-moon" style="display: none; font-size: 2em;"></i>
             <i class="fa fa-sun" style="display: block; font-size: 2em;"></i>
         </button>
     </header>
-   
-    <button onclick="iniciarTutorial('')" class="botao-tutorial">Tutorial de uso</button>
+
+
 
 
     <div id="modal" class="modal">
         <span class="modal-close" onclick="fecharModal()">&times;</span>
+        
         <div id="modal-content" class="modal-content">
             <!-- Conteúdo do tutorial -->
         </div>
 
         <button id="modal-button" class="modal-button" onclick="proximoPasso()">Próximo</button>
-        <button id="modal-back-button" class="modal-button" onclick="passoAnterior()">Voltar</button>
-
     </div>
 
 
@@ -41,7 +40,7 @@
         <section id="perfil">
             <div class="personal-image">
                 <label class="label">
-                    <input id ="imagem" type="file" onchange="trocarFoto()"/>
+                    <input id="imagem" type="file" onchange="trocarFoto()" />
                     <figure class="personal-figure">
                         <img src="public/assets/user-icon.png" class="personal-avatar" alt="avatar">
                         <figcaption class="personal-figcaption">
@@ -52,10 +51,14 @@
                 <h3>Nome</h3>
             </div>
 
-            <button id="botao-ordena">
-                <i class="fa-solid fa-arrow-down"></i>
-                <p>Ordenar</p>
-            </button>
+            <div id="botoes">
+                <button onclick="iniciarTutorial('')" class="botao-tutorial">Tutorial de uso</button>
+
+                <button id="botao-ordena">
+                    <i class="fa-solid fa-arrow-down"></i>
+                    <p>Ordenar</p>
+                </button>
+            </div>
         </section>
 
         <section id="prontuario-main">
@@ -77,4 +80,5 @@
 </body>
 
 <script src="public/js/script.js"></script>
+
 </html>
