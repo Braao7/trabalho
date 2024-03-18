@@ -41,7 +41,7 @@ function iniciarTutorial() {
 }
 
 function exibirModal(posicao) {
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
 }
 
 function fecharModal() {
@@ -78,7 +78,7 @@ function atualizarConteudo() {
         case 2:
             conteudoModal.innerHTML = "<h2>Ordenar:</h2><p>Aqui você pode ordenar seus prontuários entre os mais antigos e mais atuais para facilitar a busca</p>";
             var imagemModal = document.createElement('img');
-            imagemModal.src = 'public/assets/pii.png';
+            imagemModal.src = 'public/assets/ordenar.png';
             conteudoModal.appendChild(imagemModal);
             break;
         case 3:
@@ -88,9 +88,9 @@ function atualizarConteudo() {
             conteudoModal.appendChild(imagemModal);
             break;
         case 4:
-            conteudoModal.innerHTML = "<h2>Configurações</h2><p> ...</p>";
+            conteudoModal.innerHTML = "<h2>Mudar tema</h2><p> ...</p>";
             var imagemModal = document.createElement('img');
-            imagemModal.src = 'public/assets/configuracoes.png';
+            imagemModal.src = 'public/assets/tema.png';
             conteudoModal.appendChild(imagemModal);
 
             break;
