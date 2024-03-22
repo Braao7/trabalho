@@ -1,5 +1,6 @@
-alert("Clique no botão TUTORIAL em caso de dúvida sobre uso da plataforma");
+// alert("Clique no botão TUTORIAL em caso de dúvida sobre uso da plataforma");
 
+//TROCAR FOTO DO PERFIL
 
 function trocarFoto() {
 
@@ -28,6 +29,8 @@ function trocarFoto() {
         alert('Nenhum arquivo selecionado.');
     }
 }
+
+// TUTORIAL
 
 //inicia o modal pelo primeiro passo
 
