@@ -4,8 +4,19 @@
     box-sizing: border-box;
 }
 
-body{
+:root {
+    --principal-azul: #C0D6DF;
+    --principal-verde: #C8DFBD;
+    --principal-cinza: #f2f2f2;
+    --fonte-cinza: #343843;
+    --hover-cinza: #f8f8f8;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Cabecalho */
@@ -23,6 +34,59 @@ button {
     background-color: transparent;
     cursor: pointer;
 }
+
+/* Menu */
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--principal-cinza);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10%;
+    gap: 5px;
+  }
+  
+  .sidenav a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--fonte-cinza);
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    background-color: var(--hover-cinza);
+  }
+  
+  .sidenav .closebtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 36px;
+  }
+
+  .closebtn:hover{
+    border-radius: 100%;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 
 /* Principal */
 
@@ -62,7 +126,7 @@ button {
     font-size: 18px;
 }
 
-.modal-botoes{
+.modal-botoes {
     display: flex;
     justify-content: end;
     gap: 5px;
@@ -90,10 +154,11 @@ button {
 
 /* Perfil/Orderna */
 
-#perfil{
+#perfil {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     gap: 20px;
 }
@@ -152,16 +217,20 @@ button {
 
 #botoes {
     display: flex;
+    flex-direction: row;
     gap: 5px;
+    width: 44.5%;
+    max-width: 44.5%;
     height: 43px;
 }
 
-.botao-tutorial{
+.botao-tutorial {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-basis: 50%;
     gap: 20px;
+    max-width: 49.6%;
     padding: 10px;
     border-radius: 3%;
     background-color: #D9D9D9;
@@ -170,10 +239,11 @@ button {
 
 #botao-ordena {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-basis: 50%;
-    gap: 20px;
+    gap: 30%;
+    max-width: 49.6%;
     padding: 10px;
     border-radius: 3%;
     font-size: 18px;
@@ -181,12 +251,12 @@ button {
 }
 
 /* Prontuarios */
-#prontuario-main{
+#prontuario-main {
     display: block;
     width: 100%;
 }
 
-#lista-prontuario{
+#lista-prontuario {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -196,26 +266,110 @@ button {
     list-style: none;
 }
 
-.prontuario{
+.prontuario {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 50px;
     max-height: 70%;
     overflow: hidden;
     background-color: #D9D9D9;
+}
+
+.content-prontuario {
+    display: none;
+    padding: 0 18px;
+    width: 100%;
+    background-color: var(--principal-cinza);
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.main h1 {
+    font-size: 1.25rem;
+    margin: 0 0 0 0.2rem;
+}
+
+.preview-pront {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 15px;
     cursor: pointer;
+}
+
+label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+}
+
+label p {
+    margin: 0 0 0.5rem 0.2rem;
+}
+
+.campo {
+    padding: 0.5rem;
+    border-radius: 7px;
+    appearance: none;
+    border: none;
+    outline: none;
+    transition: background 0.1s ease-in-out;
+    background-color: var(--hover-cinza);
+    text-wrap: wrap;
+}
+
+.campo:hover {
+    background-color: var(--hover-cinza);
+}
+
+.campo:focus {
+    background-color: var(--hover-cinza);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.main {
+    width: 100%;
+    background-color: var(--principal-cinza);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.101);
+}
+
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container.metade {
+    width: 100%;
+}
+
+
+.metade {
+    width: 49.5%;
+}
+
+.dois-terços {
+    width: 66%;
+}
+
+.um-terço {
+    width: 33%;
 }
 
 /* Rodape */
 
 #rodape {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
+    margin-top: auto;
     width: 100%;
     height: 47px;
     padding: 10px;

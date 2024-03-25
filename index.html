@@ -11,14 +11,15 @@
 
 <body>
     <header id="cabecalho">
-        <button>
-            <i class="fa-solid fa-bars fa-50x" style="font-size: 2em;"></i>
+        <button id="#icon-menu" onclick="openNav()">
+            <i class="fa-solid fa-bars" style="font-size: 27px; margin-left: 10px;"></i>
         </button>
 
-        <!-- <button>
-            <i class="fa fa-moon" style="display: none; font-size: 2em;"></i>
-            <i class="fa fa-sun" style="display: block; font-size: 2em;"></i>
-        </button> -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="dadosPessoais.html">Dados Pessoais</a>
+            <a href="#">Sair</a>
+          </div>
     </header>
 
     <div id="modal" class="modal">
@@ -45,14 +46,14 @@
                         </figcaption>
                     </figure>
                 </label>
-                <h3>Nome</h3>
+                <h3 id="nome-paciente">Nome</h3>
             </div>
 
             <div id="botoes">
                 <button onclick="iniciarTutorial('')" class="botao-tutorial">Tutorial de uso</button>
 
                 <button id="botao-ordena">
-                    <i class="fa-solid fa-arrow-down"></i>
+                    <i id="icon-ordenar" class="fa-solid fa-arrow-down"></i>
                     <p>Ordenar</p>
                 </button>
             </div>
@@ -60,12 +61,7 @@
 
         <section id="prontuario-main">
             <ul id="lista-prontuario">
-                <li class="prontuario"></li>
-                <li class="prontuario"></li>
-                <li class="prontuario"></li>
-                <li class="prontuario"></li>
-                <li class="prontuario"></li>
-                <li class="prontuario"></li>
+                
             </ul>
         </section>
     </main>
