@@ -107,7 +107,7 @@ function atualizarConteudo() {
             break;
 
         case 4:
-            conteudoModal.innerHTML = "<h2>Acesso aos prontuários</h2><p> ...</p>";
+            conteudoModal.innerHTML = "<h2>Acesso aos atendimentos</h2><p> Aqui você tem acesso aos seus atendimentos</p>";
             var imagemModal = document.createElement('img');
             imagemModal.src = 'public/assets/pii.png';
             conteudoModal.appendChild(imagemModal);
@@ -349,6 +349,8 @@ async function fetchPaciente() {
         const paciente = JSON.parse(pacienteResponse);
 
         document.getElementById("nome-paciente").innerText = paciente.Nome;
+
+
 
         // Use os dados do paciente conforme necessário
     } catch (error) {

@@ -152,6 +152,15 @@ button {
     padding: 20px;
 }
 
+#principal-dados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
 /* Perfil/Orderna */
 
 #perfil {
